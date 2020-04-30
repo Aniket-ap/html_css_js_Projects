@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <title>Black Jack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/blackJack.css"/>
+  </head>
+  <style>
+    h1 {
+      margin: 0ex;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Black Jack</h1>
+      <button class="button1"><div id="player-score"></div></button>
+      <button class="button1"><div id="dealer-score"></div></button>
+    </header>
+    <table style="width: 100%;" class="table">
+      <tr>
+        <th>
+          <div id="player-cards"></div>
+        </th>
+        <br />
+        <th>
+          <div id="dealer-cards"></div>
+          <br />
+        </th>
+      </tr>
+    </table>
+
+    <button class="button2" id="new-game-button" onclick="newGame();">
+      New Game
+    </button>
+    <button class="button2" id="hit-button" onclick="hit();">HIT</button>
+    <button class="button2" id="stand-button" onclick="stand();">STAND</button>
+    <br />
+    <br />
+    <div id="player-money"></div>
+    <b2>BET</b2>:
+    <input type="number" id="bet" value="10" min="1" />
+    <br />
+    <br />
+    <br />
+    <h2 id="message-board"></h2>
+    <script src="./js/blackJack.js"></script>
+  </body>
+</html>
