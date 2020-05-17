@@ -8,12 +8,12 @@ const weather = new Weather(weatherLocation.city, weatherLocation.state);
 const ui = new UI();
 
 // Get weather on DOM load
-document.addEventListener('DOMContentLoaded', getWeather);
+document.addEventListener("DOMContentLoaded", getWeather);
 
 // Change location event
-document.getElementById('w-change-btn').addEventListener('click', (e) => {
-  const city = document.getElementById('city').value;
-  const state = document.getElementById('state').value;
+document.getElementById("w-change-btn").addEventListener("click", (e) => {
+  const city = document.getElementById("city").value;
+  const state = document.getElementById("state").value;
 
   // Change location
   weather.changeLocation(city, state);
@@ -25,13 +25,14 @@ document.getElementById('w-change-btn').addEventListener('click', (e) => {
   getWeather();
 
   // Close modal
-  $('#locModal').modal('hide');
+  $("#locModal").modal("hide");
 });
 
-function getWeather(){
-  weather.getWeather()
-    .then(results => {
+function getWeather() {
+  weather
+    .getWeather()
+    .then((results) => {
       ui.paint(results);
     })
-    .catch(err => console.log(err));
+    .catch((err) => console.log(err));
 }
